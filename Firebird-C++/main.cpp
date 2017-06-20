@@ -58,7 +58,7 @@ int main()
     cout<<("Trim: ");
     cout<<(Trim("aaaaaHolasaaaaa", 'a'))<<endl;
     cout<<("PMT: ");
-    cout<<(PMT(0.5, 10, 10000))<<endl;
+    cout<<(PMT(1, 10, 10000))<<endl;
     cout<<("BIN2DEC: ");
     cout<<(BIN2DEC("111"))<<endl;
     cout<<("DEC2BIN: ");
