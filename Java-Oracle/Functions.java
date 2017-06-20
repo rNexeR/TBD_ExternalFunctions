@@ -17,7 +17,7 @@ public class Functions{
         System.out.print("F2C: ");
         System.out.println( F2C(86));
         System.out.print("Trim: ");
-        System.out.println( Trim("aaaaaHolasaaaaa", 'a'));
+        System.out.println( StrTrim("aaaaaHolasaaaaa", "a"));
         System.out.print("PMT: ");
         System.out.println( PMT(0.5, 10, 10000));
         System.out.print("BIN2DEC: ");
@@ -82,7 +82,8 @@ public class Functions{
         return str1.compareTo(str2);
     }
 
-    public static String Trim(String str, char caracter){
+    public static String StrTrim(String str, String trim){
+        char caracter = trim.charAt(0);
         String temp = "";
         String ret = "";
         Boolean check = true;

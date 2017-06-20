@@ -1,3 +1,4 @@
+/*
 #include <arpa/inet.h>
 #include <sys/types.h>
 #include <sys/param.h>
@@ -9,17 +10,16 @@
 #include <netinet/ip.h>
 #include <netinet/ip_icmp.h>
 #include <netdb.h>
-#include <unistd.h>
+#include <stdint.h>
+*/
+#include <iostream>
+#include <math.h>
+#include <string>
+#include <bitset>#include <unistd.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdint.h>
-
-#include <iostream>
-#include <math.h>
-#include <string>
-#include <bitset>
 
 #define	DEFDATALEN	(64-ICMP_MINLEN)
 #define	MAXIPLEN	60
@@ -45,8 +45,8 @@ int main()
 {
     cout<<("Repeat: ");
     cout<<(Repeat("Nexer ", 5))<<endl;
-    cout<<("Ping: ");
-    cout<<(Ping("www.google.com"))<<endl;
+    //cout<<("Ping: ");
+    //cout<<(Ping("www.google.com"))<<endl;
     cout<<("Str Compare: ");
     cout<<(Comparestring("c", "b"))<<endl;
     cout<<("Factorial: ");
@@ -70,14 +70,10 @@ int main()
     return 0;
 }
 
+/*
 uint16_t in_cksum(uint16_t *addr, unsigned len)
 {
     uint16_t answer = 0;
-    /*
-     * Algorithm is simple, using a 32 bit accumulator (sum), add
-     * sequential 16 bit words to it, and at the end, fold back all the
-     * carry bits from the t   16 bits into the lower 16 bits.
-     */
     uint32_t sum = 0;
     while (len > 1)
     {
@@ -141,7 +137,7 @@ int Ping(string url)
 
     if ( (s = socket(AF_INET, SOCK_RAW, IPPROTO_ICMP)) < 0)
     {
-        return 0; /* Needs to run as superuser!! */
+        return 0;
     }
 
     icp = (struct icmp *)outpack;
@@ -227,7 +223,7 @@ int Ping(string url)
     }
     return 0;
 }
-
+*/
 double PMT(double tasa, int n_periodos, double prestamo)
 {
     return (prestamo*tasa) / (1 - pow((1 + tasa),(-n_periodos)));
